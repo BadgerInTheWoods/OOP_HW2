@@ -24,8 +24,8 @@ public class Main {
         Personal doctor = new Doctor();
         Personal nur = new Nurse();
 
-        Animal fish = new Parrot();
-        System.out.println(fish.getFlySpeed());
+        Animal parrot = new Parrot();
+        System.out.println(parrot.getFlySpeed());
         doc.getinfo();
 
         em.hireEmployee(doc);
