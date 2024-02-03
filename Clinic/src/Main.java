@@ -28,7 +28,7 @@ public class Main {
         Dog dog = new Dog();
         Cat cat = new Cat();
         Pigeon pigeon = new Pigeon();
-        System.out.println(pigeon.getFlySpeed());
+        System.out.println(dog.getRunSpeed());
         pigeon.fly();
         doc.getinfo();
 
@@ -54,7 +54,7 @@ public class Main {
 
         em.fireEmployee(doctor);
 
-        //System.out.println(em.getEmployees()); // тут проблема незнаю как сделать так чтобы не передавалось ничего в метод
+        //System.out.println(em.getEmployees());
 
         doc.doSurgery(parrot);
 
