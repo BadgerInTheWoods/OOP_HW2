@@ -6,7 +6,7 @@ import Patients.PatientsAbilities.Swimable;
 
 import java.time.LocalDate;
 
-public abstract class Animal{
+public abstract class Animal {
 
      // protected видно в классе и во всех наследниках
      protected static String nickName;
@@ -43,6 +43,10 @@ public abstract class Animal{
      public void setIllness(Illness illness) {
           this.illness = illness;
      }
+
+//     public String getNickName() {
+//          return nickName;
+//     }
 
 
 

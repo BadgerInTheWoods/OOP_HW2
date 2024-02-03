@@ -1,6 +1,4 @@
-import Patients.Animal;
-import Patients.Fish;
-import Patients.Parrot;
+import Patients.*;
 import Staff.Doctor;
 import Staff.Nurse;
 import Staff.Personal;
@@ -20,25 +18,47 @@ public class Main {
 
         VeterinaryClinic em = new VeterinaryClinic();
 
-        Personal doc = new Doctor("aleksey",55);
-        Personal doctor = new Doctor();
-        Personal nur = new Nurse();
+        Doctor doc = new Doctor("aleksey", 55);
+        Doctor doctor = new Doctor();
+        Nurse nur = new Nurse();
 
-        Animal parrot = new Parrot();
-        System.out.println(parrot.getFlySpeed());
+        Parrot parrot = new Parrot();
+        Fish fish = new Fish();
+        Duck duck = new Duck();
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        Pigeon pigeon = new Pigeon();
+        System.out.println(pigeon.getFlySpeed());
+        pigeon.fly();
         doc.getinfo();
 
         em.hireEmployee(doc);
         em.hireEmployee(doctor);
         em.hireEmployee(nur);
 
-        em.getEmployees(em);
-        System.out.println();
+        em.addPatient(parrot);
+        em.addPatient(fish);
+        em.addPatient(duck);
+        em.addPatient(dog);
+        em.addPatient(cat);
+        em.addPatient(pigeon);
+
+        System.out.println(em.getSwimables());
+
+        //System.out.println(em.getPatients());
+
+
+        //System.out.println(em.getEmployees());
+
+        //System.out.println();
 
         em.fireEmployee(doctor);
 
-        em.getEmployees(em); // тут проблема незнаю как сделать так чтобы не передавалось ничего в метод
+        //System.out.println(em.getEmployees()); // тут проблема незнаю как сделать так чтобы не передавалось ничего в метод
 
+        doc.doSurgery(parrot);
+
+        nur.doPrescription(parrot);
         
 
     }

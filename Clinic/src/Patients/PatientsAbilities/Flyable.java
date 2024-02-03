@@ -7,4 +7,6 @@ public interface Flyable {
     default double getFlySpeed(){
         return Math.random() * 10;
     }
+
+
 }

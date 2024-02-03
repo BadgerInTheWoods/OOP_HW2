@@ -1,24 +1,22 @@
 package Patients;
 
+import java.time.LocalDate;
 import Patients.PatientsAbilities.Flyable;
 import Patients.PatientsAbilities.Goable;
 
-import java.time.LocalDate;
-
-
-public class Parrot extends Animal implements Flyable, Goable {
-
-    public Parrot(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
+public class Pigeon extends Animal implements Goable, Flyable {
+    public Pigeon(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
         super(nickName, owner, birthDate, illness);
     }
 
-    public Parrot(){
+    public Pigeon(){
         super();
     }
 
+
     @Override
     public void eat() {
-        System.out.println(getNickName() + " Parrot eating");
+        System.out.println(getNickName() + " pigeon eating");
     }
 
     public void swim() {
@@ -28,6 +26,12 @@ public class Parrot extends Animal implements Flyable, Goable {
 
     @Override
     public void go() {
-        System.out.println("parrot going");
+        System.out.println("pigeon going");
     }
+
+    @Override
+    public double getFlySpeed() {
+        return Flyable.super.getFlySpeed();
+    }
+
 }
